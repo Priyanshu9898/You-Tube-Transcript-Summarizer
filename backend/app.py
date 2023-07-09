@@ -6,7 +6,7 @@ import os
 
 
 app = Flask(__name__)
-CORS(app, origins='http://localhost:3001')
+CORS(app, origins='*')
 
 summarizer = pipeline('summarization')
 
@@ -64,7 +64,7 @@ def summarize():
 
         return jsonify({
             'transcript': full_transcript,
-            'summary': summarized_text
+            'summary': summarized_text[0]
         })
 
     except Exception as e:
