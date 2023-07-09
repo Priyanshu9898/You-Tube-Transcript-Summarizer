@@ -3,3 +3,5 @@ youtube-transcript-api
 transformers
 flask-cors
 tensorflow
+flask_wtf
+bert-extractive-summarizer
