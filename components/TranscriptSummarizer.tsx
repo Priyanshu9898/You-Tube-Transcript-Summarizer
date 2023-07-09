@@ -49,7 +49,7 @@ const TranscriptSummarizer: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen py-8 bg-gray-100 text-black">
       <h1 className="text-3xl font-bold mb-6 text-black">
         YouTube Transcript Summarizer
       </h1>
