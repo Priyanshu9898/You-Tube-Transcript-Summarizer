@@ -34,9 +34,15 @@ const TranscriptSummarizer: React.FC = () => {
     setSummary("");
 
     try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        withCredentials: true,
+      };
       const response = await axios.post("http://127.0.0.1:5000/api/summarize", {
         videoId,
-      });
+      }, config);
       const { transcript, summary } = response.data;
       setTranscript(transcript);
       setSummary(summary);
